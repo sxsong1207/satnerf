@@ -18,6 +18,7 @@ import os
 import numpy as np
 import datetime
 from sat_utils import compute_mae_and_save_dsm_diff
+from osgeo import gdal
 
 from eval_satnerf import find_best_embbeding_for_val_image, save_nerf_output_to_images, predefined_val_ts
 
@@ -262,4 +263,5 @@ def main():
 
 
 if __name__ == "__main__":
+    gdal.AllRegister()
     main()

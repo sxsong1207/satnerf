@@ -1,7 +1,7 @@
 ### create satnerf venv
-conda create -n satnerf -c conda-forge python=3.6 libgdal
+conda create -n satnerf -c conda-forge python=3.8 libgdal
 conda activate satnerf
-pip install --ignore-installed certifi -r requirements.txt
-pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+pip install gdal rpcm opencv-contrib-python jupyter pillow chardet matplotlib numpy affine fire kornia plyflatten pyproj pytorch_lightning torchmetrics pyyaml rasterio scipy srtm4 utm scikit_image numba
 conda deactivate
 echo "satnerf conda env created !"

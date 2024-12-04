@@ -3,3 +3,8 @@ __pycache__
 logs
 checkpoints
 .ipynb_checkpoints
+
+out_dsm_path/
+out_eval_path/
+dataset/
+pretrained_models/

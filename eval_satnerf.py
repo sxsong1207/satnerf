@@ -14,6 +14,7 @@ import train_utils
 import argparse
 import glob
 import shutil
+from osgeo import gdal
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -313,5 +314,6 @@ def eval_aoi(run_id, logs_dir, output_dir, epoch_number, split, checkpoints_dir=
     print("Mean MAE: {:.3f}\n".format(np.mean(np.array(mae))))
 
 if __name__ == '__main__':
+    gdal.AllRegister()
     import fire
     fire.Fire(eval_aoi)

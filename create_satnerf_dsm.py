@@ -6,6 +6,7 @@ import torch
 import shutil
 import argparse
 import rasterio
+from osgeo import gdal
 
 from datasets import SatelliteDataset
 import sat_utils
@@ -131,5 +132,6 @@ def create_pretty_dsm(run_id, logs_dir, output_dir, epoch_number, checkpoints_di
             dst.write(gt_dsm, 1)
 
 if __name__ == '__main__':
+    gdal.AllRegister()
     import fire
     fire.Fire(create_pretty_dsm)
